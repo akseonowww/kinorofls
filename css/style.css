@@ -6,11 +6,19 @@
  * Made By MaterializeCSS.com
  */
 
+.nav-header {
+	position: fixed;
+}
+
 .icon-block {
    padding: 0 15px;
 }
 .icon-block .material-icons {
    font-size: inherit;
+}
+
+.style-root {
+	padding-top: 56px;
 }
 
 .style-card {
@@ -62,7 +70,7 @@ p.raiting {
 }
 
 .style-synopsis {
-   position: relative;
+   /* position: relative; */
    z-index: 1;
    margin-top: -14px;
    padding: 24px 16px 43px;
