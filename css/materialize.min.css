@@ -598,10 +598,10 @@
    color: #4fc3f7 !important;
 }
 .light-orange.lighten-1 {
-   background-color: #141414!important;
+   background-color: #141414 !important;
 }
 .light-orange-text.text-lighten-1 {
-   color: #141414!important;
+   color: #141414 !important;
 }
 .light-orange.darken-1 {
    background-color: #039be5 !important;
@@ -3581,7 +3581,7 @@ h6 a {
    font-weight: inherit;
 }
 h1 {
-   font-family: "Graphik", Arial, Helvetica, sans-serif !important;
+   font-family: "Jost", Arial, Helvetica, sans-serif !important;
    font-weight: 900;
    font-size: 4.2rem;
    line-height: 110%;
