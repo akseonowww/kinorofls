@@ -17,14 +17,10 @@
    font-size: inherit;
 }
 
-.style-root {
-	padding-top: 56px;
-}
-
 .style-card {
    color: hsla(0, 0%, 100%, 0.6);
    text-align: center;
-   padding: 24px 16px 14px;
+   padding: 24px 16px 20px;
 }
 .style-card h1 {
    color: #fff;
@@ -36,12 +32,16 @@
    margin: 0;
 }
 .style-card .btn-large {
-   margin-top: 14px;
+   margin-top: 22px;
 }
 p.raiting {
    padding-top: 14px;
    padding-bottom: 6px;
 }
+
+.style-card {
+   font-size: 15px;
+} 
 
 .raiting-value {
    color: #3bb33b;
@@ -91,9 +91,9 @@ p.raiting {
 }
 
 h3 {
-   font-size: 18px;
+   font-size: 22px;
    line-height: 18px;
-   font-weight: 900;
+   font-weight: 700;
    margin: 0;
 }
 
@@ -114,7 +114,7 @@ h3 {
 }
 
 .style-title .btn {
-   font-size: 15px;
+   font-size: 18px;
    color: #f50;
    padding-right: 0;
 }
@@ -127,6 +127,7 @@ h3 {
 .style-episodes__content p {
    margin: 0;
    margin-bottom: 5px;
+   font-size: 15px;
 }
 
 .style-trailer {
@@ -140,7 +141,7 @@ h3 {
 
 .trailer__name,
 .trailer__date {
-   font-size: 13px;
+   font-size: 15px;
    line-height: 18px;
    font-weight: 700;
    margin: 0;
@@ -148,9 +149,10 @@ h3 {
 }
 
 .trailer__date {
+font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
    font-weight: normal;
-   margin-top: 1px;
+   margin-top: 4px;
 }
 
 .style-trailer .style-title {
@@ -180,7 +182,7 @@ h3 {
 .actors__item .info {
    display: flex;
    flex-direction: column;
-   font-size: 13px;
+   font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
 }
 
@@ -243,7 +245,7 @@ h3 {
 }
 
 .raiting-list__value {
-   font-size: 15px;
+   font-size: 18px;
    line-height: 20px;
    color: rgba(0, 0, 0, 0.4);
 }
@@ -254,15 +256,15 @@ h3 {
 }
 
 .raiting-list__value strong {
-   font-size: 20px;
+   font-size: 24px;
    font-weight: 900;
    color: #000;
-   margin-right: 6px;
+   margin-right: 3px;
 }
 
 .raiting-list__source {
    color: #333;
-   font-size: 13px;
+   font-size: 15px;
    white-space: nowrap;
 }
 
@@ -333,13 +335,13 @@ h3 {
 }
 
 .review__info .username {
-   font-size: 15px;
+   font-size: 18px;
    font-weight: 600;
    line-height: 18px;
 }
 
 .review__info .counter-reviews {
-   font-size: 13px;
+   font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
 }
 
@@ -358,14 +360,14 @@ h3 {
 }
 
 .review-title {
-   font-size: 15px;
+   font-size: 18px;
    font-weight: 400;
    line-height: 18px;
 }
 
 .review-content {
-   padding-top: 8px;
-   font-size: 13px;
+   padding-top: 10px;
+   font-size: 15px;
    line-height: 18px;
 }
 
@@ -385,18 +387,18 @@ h3 {
 }
 
 .dopinfo-parametr {
-   font-size: 13px;
+   font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
 }
 
 .dopinfo-value {
-   font-size: 13px;
+   font-size: 15px;
 }
 
 /* Footer */
 .page-footer {
    margin-top: 48px;
-   font-size: 13px;
+   font-size: 15px;
 }
 
 #logo-container {
