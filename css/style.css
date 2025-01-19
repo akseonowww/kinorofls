@@ -67,6 +67,7 @@ p.raiting {
    height: 56.25vw;
    max-height: calc(768px / 1.7777777778);
    overflow: hidden;
+   padding-top: 56px;
 }
 
 .style-synopsis {
@@ -214,7 +215,7 @@ font-size: 15px;
    align-items: center;
    padding: 24px;
    background: #f7f7f7;
-   margin-bottom: 8px;
+   margin: 8px 16px  ;
 }
 
 .raiting-block__number {
