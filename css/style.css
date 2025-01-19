@@ -43,7 +43,7 @@ p.raiting {
    display: flex;
    justify-content: center;
    gap: 16px;
-   margin: 16px 0 20px;
+   margin: 22px 0 24px;
 }
 
 .btn-list__item {
@@ -51,6 +51,7 @@ p.raiting {
    flex-direction: column;
    justify-content: center;
    gap: 4px;
+	width: 100%;
 }
 
 .style-poster {
@@ -111,8 +112,7 @@ h3 {
 }
 
 .style-episodes__content,
-.style-trailer__content,
-.style-actors__content {
+.style-trailer__content {
    padding: 0 16px;
 }
 
@@ -158,6 +158,7 @@ h3 {
    width: auto;
    overflow-x: scroll;
    gap: 12px;
+	padding: 0 16px;
 }
 
 .actors__item {
@@ -192,9 +193,9 @@ h3 {
    padding: 16px 0;
 }
 
-.style-raiting__content {
+/* .style-raiting__content {
    padding: 0 16px;
-}
+} */
 
 .raiting-block {
    display: flex;
@@ -224,6 +225,7 @@ h3 {
    gap: 8px;
    width: auto;
    overflow-x: scroll;
+	padding: 0 16px;
    padding-bottom: 16px;
 }
 
