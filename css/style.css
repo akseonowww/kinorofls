@@ -7,7 +7,9 @@
  */
 
 .nav-header {
-	position: fixed;
+   position: fixed;
+   top: 0;
+   left: 0;
 }
 
 .icon-block {
@@ -41,7 +43,7 @@ p.raiting {
 
 .style-card {
    font-size: 15px;
-} 
+}
 
 .raiting-value {
    color: #3bb33b;
@@ -59,7 +61,11 @@ p.raiting {
    flex-direction: column;
    justify-content: center;
    gap: 4px;
-	width: 100%;
+   width: 100%;
+}
+
+.style-root {
+   padding-top: 56px;
 }
 
 .style-poster {
@@ -67,7 +73,6 @@ p.raiting {
    height: 56.25vw;
    max-height: calc(768px / 1.7777777778);
    overflow: hidden;
-   padding-top: 56px;
 }
 
 .style-synopsis {
@@ -150,7 +155,7 @@ h3 {
 }
 
 .trailer__date {
-font-size: 15px;
+   font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
    font-weight: normal;
    margin-top: 4px;
@@ -169,7 +174,7 @@ font-size: 15px;
    width: auto;
    overflow-x: scroll;
    gap: 12px;
-	padding: 0 16px;
+   padding: 0 16px;
 }
 
 .actors__item {
@@ -215,7 +220,7 @@ font-size: 15px;
    align-items: center;
    padding: 24px;
    background: #f7f7f7;
-   margin: 8px 16px  ;
+   margin: 8px 16px;
 }
 
 .raiting-block__number {
@@ -236,7 +241,7 @@ font-size: 15px;
    gap: 8px;
    width: auto;
    overflow-x: scroll;
-	padding: 0 16px;
+   padding: 0 16px;
    padding-bottom: 16px;
 }
 
@@ -291,6 +296,35 @@ font-size: 15px;
    height: 100%;
 }
 
+.fancybox__backdrop,
+.is-compact .fancybox__footer {
+   background:     !important;
+}
+
+.f-button,
+.is-compact .fancybox__footer {
+   background: rgba(0, 0, 0,) !important
+   ;
+}
+
+.f-thumbs__slide {
+	width: 100px !important;
+	height: 56px !important;
+}
+
+.fancybox__thumbs.is-horizontal {
+   padding-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+   .f-carousel__nav .f-button.is-prev, .f-carousel__nav .f-button.is-next, .fancybox__nav .f-button.is-prev, .fancybox__nav .f-button.is-next {
+      opacity: 0 !important;
+   }
+   .f-thumbs__slide__button {
+      width: 100% !important;
+   }
+}
+
 .reviews-list {
    padding: 0 16px;
    display: flex;
@@ -319,7 +353,7 @@ font-size: 15px;
 }
 
 .review-false .review__header {
-   border-left: 4px solid red;
+   /* border-left: 4px solid red; */
 }
 
 .review__info {
