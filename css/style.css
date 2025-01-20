@@ -57,16 +57,37 @@ p.raiting {
 .btn-list__item {
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   align-items: center;
    gap: 4px;
    width: 100%;
+
+   background-color: transparent;
+   color: #fff;
+   border: none;
+   transition: background 0.2s ease, transform 0.2s ease;
+   cursor: pointer;
 }
+
+.btn-list__item:hover {
+   transform: scale(1.05);
+} 
 
 .style-poster {
    width: 100%;
-   height: 56.25vw;
+   /* height: 56.25vw; */
    max-height: calc(768px / 1.7777777778);
    overflow: hidden;
+}
+
+.style-poster__image {
+   width: 220px;
+   height: 330px;
+   overflow: hidden;
+   margin: 40px auto 0;
+}
+
+.style-poster__image {
+   height: 100%;
 }
 
 .style-synopsis {
@@ -175,6 +196,11 @@ h3 {
    padding: 0 16px;
 }
 
+.actors__list::-webkit-scrollbar { 
+   width: 0 !important;
+   display: none; 
+ }
+
 .actors__item {
    display: flex;
    /* align-items: center; */
@@ -202,7 +228,7 @@ h3 {
    color: #000;
 }
 
-.actors__item .info .span {
+.actors__item .info span {
    width: 100%;
    white-space: nowrap;
    overflow: hidden;
@@ -256,6 +282,11 @@ h3 {
    padding-bottom: 16px;
 }
 
+.raiting-list::-webkit-scrollbar { 
+   width: 0 !important;
+   display: none; 
+ }
+
 .raiting-list__item {
    padding: 16px;
    background: #f7f7f7;
@@ -299,6 +330,11 @@ h3 {
    padding: 0 16px 16px;
 }
 
+.cadrs-list::-webkit-scrollbar { 
+   width: 0 !important;
+   display: none; 
+ }
+
 .cadrs-list__item {
    height: 168px;
 }
@@ -317,6 +353,11 @@ h3 {
    overflow-y: hidden;
    overflow-x: scroll;
 }
+
+.reviews-list::-webkit-scrollbar { 
+   width: 0 !important;
+   display: none; 
+ }
 
 .reviews-list__item {
    padding-top: 16px;
