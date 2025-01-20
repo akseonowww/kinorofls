@@ -8,6 +8,7 @@
 
 .nav-header {
    position: fixed;
+   z-index: 10000;
 }
 
 .icon-block {
@@ -256,8 +257,7 @@ h3 {
    align-items: center;
    padding: 24px;
    background: #f7f7f7;
-   margin-bottom: 8px;
-   margin-top: 9px;
+   margin: 9px 16px 8px;
 }
 
 .raiting-block__number {

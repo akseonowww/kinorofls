@@ -120,41 +120,98 @@ actors.forEach((actor) => {
    actorsList.appendChild(actorDiv);
 });
 
-
-
 const data = {
    title: "Кибердеревня",
-   data: "2024",
-   tag: ["фантастика", "комедия"],
+   date: "2024-09-23",
+   tags: ["фантастика", "комедиzzя"],
    country: "Россия",
    age: "12+",
+   raiting: {
+      value: {
+         star_1: 100,
+         star_2: 1200,
+         star_3: 112,
+         star_4: 2000,
+         star_5: 145,
+         star_6: 100,
+         star_7: 200,
+         star_8: 500,
+         star_9: 100,
+         star_10: 600000,
+      },
+      vote: 603700,
+   },
    description: {
       short: "Марсианский фермер защищает свое хозяйство от алчной корпорации. Обаятельная сай-фай-комедия",
-      full: "2100 год. Николай счастливо живет с семьей в кибердеревне на Марсе. Он спокойно ведет роботизированное хозяйство, пока на планету не прилетает руководитель огромной корпорации — Барагозин, который хочет построить на месте деревни новый завод. Николай отправляется в полное опасностей и приключений путешествие до Земли, чтобы спасти свой дом."
+      full: "2100 год. Николай счастливо живет с семьей в кибердеревне на Марсе. Он спокойно ведет роботизированное хозяйство, пока на планету не прилетает руководитель огромной корпорации — Барагозин, который хочет построить на месте деревни новый завод. Николай отправляется в полное опасностей и приключений путешествие до Земли, чтобы спасти свой дом.",
    },
-   poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/d9518526-b171-4b6d-9d56-dcc41ba45155/1920x",
+   poster:
+      "https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/d9518526-b171-4b6d-9d56-dcc41ba45155/1920x",
    trailer: {
       vk: "https://vkvideo.ru/video_ext.php?oid=-108468&id=456251197&hd=2&autoplay=1",
       rutube: "",
       youtube: "",
-      other: ""
+      other: "",
+   },
+};
+
+// 5 = 3
+// 4 = 2
+// 3 = 12
+// sum = 15+8+36=59
+// value = 3.5
+
+let raitingValuseSum = 0;
+let raitingUsersSum = 0;
+for (let k = 1; k <= 10; k++) {
+   raitingUsersSum += data.raiting.value[`star_${k}`];
+   raitingValuseSum += k * data.raiting.value[`star_${k}`];
+}
+
+let raitingValue = raitingValuseSum / raitingUsersSum;
+
+if (raitingValue.toFixed(1) - raitingValue.toFixed(0) === 0) {
+   raitingValue = raitingValue.toFixed(0);
+} else {
+   raitingValue = raitingValue.toFixed(1);
+}
+
+getNumber = (counter, number, word) => {
+   counter = (getNumber / number).toFixed(0).toString();
+   return counter + word;
+};
+
+raitingUsersSum = (raitingUsersSum / 1000).toFixed(0).toString() + "K";
+
+document.getElementById("title").innerHTML = data.title;
+document.getElementById("raitingValue").innerHTML = raitingValue.toString();
+document.getElementById("raitingUsers").innerHTML = raitingUsersSum.toString();
+getNumber(raitingUsersSum, 1, "К");
+
+const dateFilm = data.date.split("-");
+
+document.getElementById("date").innerHTML = `${dateFilm[2]}.${dateFilm[1]}.${dateFilm[0]}`;
+document.getElementById("year").innerHTML = date[0];
+
+stringTags = "";
+const tags = data.tags.forEach((tag) => {
+   k = data.tags.length - 1;
+   if (k > 0) {
+      stringTags += tag + ", ";
+      k--;
    }
-} 
+   return stringTags
+});
 
-document.getElementById("title")
-document.getElementById("raitingValue")
-document.getElementById("raitingVotes")
-document.getElementById("date")
-document.getElementById("year")
-document.getElementById("tags")
-document.getElementById("sesonCounter")
+document.getElementById("tags").innerHTML = tags;
+// document.getElementById("sesonCounter").innerHTML
 
-document.getElementById("synopsisShort")
-document.getElementById("synopsisFull")
+// document.getElementById("synopsisShort").innerHTML
+// document.getElementById("synopsisFull").innerHTML
 
-document.querySelectorAll(".openMedia")
-document.querySelectorAll(".openMedia")
-document.querySelectorAll(".openMedia")
-document.querySelectorAll(".btnAddStars")
-document.querySelectorAll(".btnAddBookmark")
-document.querySelectorAll(".btnShare")
+// document.querySelectorAll(".openMedia").innerHTML
+// document.querySelectorAll(".openMedia").innerHTML
+// document.querySelectorAll(".openMedia").innerHTML
+// document.querySelectorAll(".btnAddStars")
+// document.querySelectorAll(".btnAddBookmark")
+// document.querySelectorAll(".btnShare")

@@ -2,118 +2,116 @@
 :root {
    /* Colors */
    --primary-color: #646cff;
-   
+
    /* Transitions */
    --transition-duration: 0.4s;
    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
- }
+}
 
 .tabs button:focus {
    outline: none;
-   background-color:rgba(0,0,0, 0);
+   background-color: rgba(0, 0, 0, 0);
 }
- 
- 
- /* Tabs Container */
- /* .tabs {
+
+/* Tabs Container */
+/* .tabs {
    max-width: 600px;
    margin: 2rem;
  } */
- 
- /* Tabs Navigation */
- .tabs-nav {
+
+/* Tabs Navigation */
+.tabs-nav {
    position: relative;
    display: flex;
    justify-content: center;
    gap: 4px;
-   background: rgba(0,0,0, 0.1);
+   background: rgba(0, 0, 0, 0.1);
    padding: 6px;
    border-radius: 100px;
    isolation: isolate; /* Create new stacking context */
    width: fit-content;
-   margin: 1em auto ;
+   margin: 1em auto;
    height: 52px;
- }
- 
- /* Tab Buttons */
- .tab-button {
+}
+
+/* Tab Buttons */
+.tab-button {
    flex: 1;
    all: unset;
    position: relative;
    padding: 0 22px;
    font-size: 16px;
    font-weight: 700;
-   color:  rgba(0,0,0, 0.5);
+   color: rgba(0, 0, 0, 0.5);
    border-radius: 100px;
    cursor: pointer;
    transition: color var(--transition-duration) var(--transition-timing);
    text-align: center;
    white-space: nowrap;
    z-index: 1;
- }
- 
- .tab-button:hover {
- /*   color: red; */
- }
- 
- .tab-button[aria-selected="true"] {
+}
+
+.tab-button:hover {
+   /*   color: red; */
+}
+
+.tab-button[aria-selected="true"] {
    color: #fff;
- }
- 
- /* Moving Indicator */
- .tabs-indicator {
+}
+
+/* Moving Indicator */
+.tabs-indicator {
    position: absolute;
    top: 5.5px;
    bottom: 5.5px;
    left: 0;
    border-radius: 100px;
-   background:  rgba(0,0,0, 0.8);;
-   transition: 
-     transform var(--transition-duration) var(--transition-timing),
-     width var(--transition-duration) var(--transition-timing);
+   background: #141414;
+   transition: transform var(--transition-duration) var(--transition-timing),
+      width var(--transition-duration) var(--transition-timing);
    pointer-events: none;
    z-index: 0;
    will-change: transform, width;
- }
- 
- /* Tab Panels */
- .tab-panel {
+}
+
+/* Tab Panels */
+.tab-panel {
    background: transparent;
    display: none;
    transform-origin: top;
    animation: slideIn var(--transition-duration) var(--transition-timing);
- }
- 
- .tab-panel[aria-hidden="false"] {
+}
+
+.tab-panel[aria-hidden="false"] {
    display: block;
- }
- 
- /* Animations */
- @keyframes slideIn {
+}
+
+/* Animations */
+@keyframes slideIn {
    from {
-     opacity: 0;
-     transform: translateY(-8px) scale(0.98);
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
    }
    to {
-     opacity: 1;
-     transform: translateY(0) scale(1);
+      opacity: 1;
+      transform: translateY(0) scale(1);
    }
- }
- 
- /* Focus styles */
- .tab-button:focus-visible {
+}
+
+/* Focus styles */
+.tab-button:focus-visible {
    outline: 2px solid var(--primary-color);
    outline-offset: 2px;
- }
- 
- /* Content styling */
- .tab-panel h2 {
+}
+
+/* Content styling */
+.tab-panel h2 {
    margin-bottom: 1rem;
    font-size: 1.5rem;
    color: var(--primary-color);
- }
- 
- .tab-panel p {
+}
+
+.tab-panel p {
    line-height: 1.6;
    opacity: 0.9;
- }
+}
