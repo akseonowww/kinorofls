@@ -8,8 +8,6 @@
 
 .nav-header {
    position: fixed;
-   top: 0;
-   left: 0;
 }
 
 .icon-block {
@@ -19,10 +17,14 @@
    font-size: inherit;
 }
 
+.style-root {
+   padding-top: 56px;
+}
+
 .style-card {
    color: hsla(0, 0%, 100%, 0.6);
    text-align: center;
-   padding: 24px 16px 20px;
+   padding: 24px 16px 14px;
 }
 .style-card h1 {
    color: #fff;
@@ -34,15 +36,11 @@
    margin: 0;
 }
 .style-card .btn-large {
-   margin-top: 22px;
+   margin-top: 14px;
 }
 p.raiting {
    padding-top: 14px;
    padding-bottom: 6px;
-}
-
-.style-card {
-   font-size: 15px;
 }
 
 .raiting-value {
@@ -62,10 +60,6 @@ p.raiting {
    justify-content: center;
    gap: 4px;
    width: 100%;
-}
-
-.style-root {
-   padding-top: 56px;
 }
 
 .style-poster {
@@ -97,7 +91,7 @@ p.raiting {
 }
 
 h3 {
-   font-size: 22px;
+   font-size: 20px;
    line-height: 18px;
    font-weight: 700;
    margin: 0;
@@ -120,7 +114,7 @@ h3 {
 }
 
 .style-title .btn {
-   font-size: 18px;
+   font-size: 15px;
    color: #f50;
    padding-right: 0;
 }
@@ -133,7 +127,6 @@ h3 {
 .style-episodes__content p {
    margin: 0;
    margin-bottom: 5px;
-   font-size: 15px;
 }
 
 .style-trailer {
@@ -155,10 +148,9 @@ h3 {
 }
 
 .trailer__date {
-   font-size: 15px;
    color: rgba(0, 0, 0, 0.6);
    font-weight: normal;
-   margin-top: 4px;
+   margin-top: 1px;
 }
 
 .style-trailer .style-title {
@@ -183,6 +175,11 @@ h3 {
    flex-direction: column;
    gap: 12px;
    padding-bottom: 12px;
+   width: 100px;
+}
+
+.actors__item img {
+   width: 100%;
 }
 
 .actors__item .info {
@@ -199,6 +196,13 @@ h3 {
    color: #000;
 }
 
+.actors__item .info .span {
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; 
+}
+
 .photo {
    background: #000;
    height: 150px;
@@ -206,7 +210,7 @@ h3 {
 }
 
 .style-raiting {
-   padding: 16px 0;
+   /* padding: 16px 0; */
 }
 
 /* .style-raiting__content {
@@ -220,7 +224,8 @@ h3 {
    align-items: center;
    padding: 24px;
    background: #f7f7f7;
-   margin: 8px 16px;
+   margin-bottom: 8px;
+   margin-top: 9px;
 }
 
 .raiting-block__number {
@@ -251,7 +256,7 @@ h3 {
 }
 
 .raiting-list__value {
-   font-size: 18px;
+   font-size: 15px;
    line-height: 20px;
    color: rgba(0, 0, 0, 0.4);
 }
@@ -262,15 +267,15 @@ h3 {
 }
 
 .raiting-list__value strong {
-   font-size: 24px;
+   font-size: 20px;
    font-weight: 900;
    color: #000;
-   margin-right: 3px;
+   margin-right: 6px;
 }
 
 .raiting-list__source {
    color: #333;
-   font-size: 15px;
+   font-size: 13px;
    white-space: nowrap;
 }
 
@@ -294,35 +299,7 @@ h3 {
 
 .cadrs-list__item img {
    height: 100%;
-}
-
-.fancybox__backdrop,
-.is-compact .fancybox__footer {
-   background:     !important;
-}
-
-.f-button,
-.is-compact .fancybox__footer {
-   background: rgba(0, 0, 0,) !important
-   ;
-}
-
-.f-thumbs__slide {
-	width: 100px !important;
-	height: 56px !important;
-}
-
-.fancybox__thumbs.is-horizontal {
-   padding-bottom: 18px;
-}
-
-@media (max-width: 768px) {
-   .f-carousel__nav .f-button.is-prev, .f-carousel__nav .f-button.is-next, .fancybox__nav .f-button.is-prev, .fancybox__nav .f-button.is-next {
-      opacity: 0 !important;
-   }
-   .f-thumbs__slide__button {
-      width: 100% !important;
-   }
+   width: auto;
 }
 
 .reviews-list {
@@ -353,7 +330,7 @@ h3 {
 }
 
 .review-false .review__header {
-   /* border-left: 4px solid red; */
+   border-left: 4px solid red;
 }
 
 .review__info {
@@ -370,13 +347,13 @@ h3 {
 }
 
 .review__info .username {
-   font-size: 18px;
+   font-size: 15px;
    font-weight: 600;
    line-height: 18px;
 }
 
 .review__info .counter-reviews {
-   font-size: 15px;
+   font-size: 13px;
    color: rgba(0, 0, 0, 0.6);
 }
 
@@ -397,13 +374,13 @@ h3 {
 .review-title {
    font-size: 18px;
    font-weight: 400;
-   line-height: 18px;
+   line-height: 22px;
 }
 
 .review-content {
-   padding-top: 10px;
+   padding-top: 8px;
    font-size: 15px;
-   line-height: 18px;
+   line-height: 20px;
 }
 
 /* style-dopinfo */

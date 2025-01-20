@@ -41,3 +41,81 @@ cadrs.forEach((url) => {
 
    galleryCadrs.appendChild(cadr);
 });
+
+const actorsList = document.querySelector(".actors__list");
+const actors = [
+   {
+      first_name: "Сергей",
+      last_name: "Чихачёв",
+      role: "Николай",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/1539232.jpg",
+   },
+   {
+      first_name: "Григорий",
+      last_name: "Скряпкин",
+      role: "Барагозин",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/1141993.jpg",
+   },
+   {
+      first_name: "Артем",
+      last_name: "Семакин",
+      role: "зам Барагозина",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/1193331.jpg",
+   },
+   {
+      first_name: "Сергей",
+      last_name: "Чихачёв",
+      role: "Николай",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/231398.jpg",
+   },
+   {
+      first_name: "Ольга",
+      last_name: "Жевакина",
+      role: "Надя, жена Николая",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/1942532.jpg",
+   },
+   {
+      first_name: "Елена",
+      last_name: "Махова",
+      role: "Галина, жена зама Барагозина",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/1960517.jpg",
+   },
+   {
+      first_name: "Ренат",
+      last_name: "Мухамбаев",
+      role: "Василий",
+      photo: "https://www.kinopoisk.ru/images/sm_actor/3195363.jpg",
+   },
+];
+actorsList.innerHTML = "";
+
+actors.forEach((actor) => {
+   const actorDiv = document.createElement("div");
+   actorDiv.setAttribute("class", "actors__item");
+   actorDiv.innerHTML = `
+<div class="photo">
+   <img
+      src="${actor.photo}"
+      alt="Фото"
+   />
+</div>
+<div class="info">
+   <strong class="name"> 
+      ${actor.first_name}
+      ${actor.last_name}
+   </strong>
+   <span>${actor.role}</span>
+</div>
+`;
+
+   {
+      /* <div class="actors__item">
+<div class="photo"></div>
+<div class="info">
+<strong class="name">Сергей Чихачёв</strong>
+<span>Роль</span>
+</div>
+</div> */
+   }
+   actorsList.appendChild(actorDiv);
+});
