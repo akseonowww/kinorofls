@@ -119,3 +119,42 @@ actors.forEach((actor) => {
    }
    actorsList.appendChild(actorDiv);
 });
+
+
+
+const data = {
+   title: "Кибердеревня",
+   data: "2024",
+   tag: ["фантастика", "комедия"],
+   country: "Россия",
+   age: "12+",
+   description: {
+      short: "Марсианский фермер защищает свое хозяйство от алчной корпорации. Обаятельная сай-фай-комедия",
+      full: "2100 год. Николай счастливо живет с семьей в кибердеревне на Марсе. Он спокойно ведет роботизированное хозяйство, пока на планету не прилетает руководитель огромной корпорации — Барагозин, который хочет построить на месте деревни новый завод. Николай отправляется в полное опасностей и приключений путешествие до Земли, чтобы спасти свой дом."
+   },
+   poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/d9518526-b171-4b6d-9d56-dcc41ba45155/1920x",
+   trailer: {
+      vk: "https://vkvideo.ru/video_ext.php?oid=-108468&id=456251197&hd=2&autoplay=1",
+      rutube: "",
+      youtube: "",
+      other: ""
+   }
+} 
+
+document.getElementById("title")
+document.getElementById("raitingValue")
+document.getElementById("raitingVotes")
+document.getElementById("date")
+document.getElementById("year")
+document.getElementById("tags")
+document.getElementById("sesonCounter")
+
+document.getElementById("synopsisShort")
+document.getElementById("synopsisFull")
+
+document.querySelectorAll(".openMedia")
+document.querySelectorAll(".openMedia")
+document.querySelectorAll(".openMedia")
+document.querySelectorAll(".btnAddStars")
+document.querySelectorAll(".btnAddBookmark")
+document.querySelectorAll(".btnShare")

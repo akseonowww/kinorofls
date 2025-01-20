@@ -15,6 +15,10 @@
          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
       />
 
+      <!-- Tabs -->
+      <script src="./js/tabs.js"></script>
+      <link rel="stylesheet" href="./css/tabs.css" />
+
       <!-- Font: Graphik Regular, Medium, Bold, Black -->
       <!-- <link rel="stylesheet" href="./fonts/Graphik LС/stylesheet.css" /> -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -118,40 +122,46 @@
             />
          </div>
          <div class="style-card">
-            <h1 class="header center font-weight-bold">Кибердеревня</h1>
+            <h1 class="header center font-weight-bold" id="title">
+               Кибердеревня
+            </h1>
             <p class="raiting">
-               <strong class="raiting-value">8.6</strong> 603K
+               <strong class="raiting-value" id="raitingValue">8.6</strong>
+               <span id="raitingVotes"> 603K </span>
             </p>
-            <p>2023, фантастика, комедия, 2 сезона</p>
-            <p>Россия, 25 мин, 12+</p>
-            <a
-               href="#"
-               class="btn-large orange"
-               >Смотреть</a
-            >
+            <p>
+               <span id="year"> 2023 </span>,
+               <span id="tags"> фантастика, комедия </span>,
+               <span class="sesonCounter"> 2 сезона </span>
+            </p>
+            <p>
+               <span id="country">Россия</span>,
+               <span id="timeEpisode">29 мин</span>, <span id="age">12+</span>
+            </p>
+            <a href="#" class="btn-large orange openMedia">Смотреть</a>
             <div class="btn-list">
-               <div class="btn-list__item text-red-1">
+               <button class="btn-list__item btnAddStars">
                   <i class="material-icons">star_border</i>
                   <span>Оценить</span>
-               </div>
-               <div class="btn-list__item">
+               </button>
+               <button class="btn-list__item btnAddBookmark">
                   <i class="material-icons">bookmark_border</i>
                   <span>Буду смотреть</span>
-               </div>
-               <div class="btn-list__item">
+               </button>
+               <button class="btn-list__item btnShare">
                   <i class="material-icons">share</i> <span>Поделиться</span>
-               </div>
+               </button>
             </div>
          </div>
       </div>
 
-      <div class="style-root" style="padding-top: 0;">
+      <div class="style-root" style="padding-top: 0">
          <div class="style-synopsis">
-            <div class="style-synopsis__short">
+            <div class="style-synopsis__short" id="synopsisShort">
                Марсианский фермер защищает свое хозяйство от алчной корпорации.
                Обаятельная сай-фай-комедия
             </div>
-            <div class="style-synopsis__full">
+            <div class="style-synopsis__full" id="synopsisFull">
                2100 год. Николай счастливо живет с семьей в кибердеревне на
                Марсе. Он спокойно ведет роботизированное хозяйство, пока на
                планету не прилетает руководитель огромной корпорации —
@@ -164,12 +174,7 @@
          <div class="style-episodes">
             <div class="style-title">
                <h3>Список эпизодов</h3>
-               <a
-                  href="#"
-                  id="download-button"
-                  class="btn"
-                  >Все</a
-               >
+               <a href="#" id="download-button" class="btn">Все</a>
             </div>
             <div class="style-episodes__content">
                <p>Вышло 10 эпизодов в 1 сезоне.</p>
@@ -182,21 +187,108 @@
                <h3>Трейлер</h3>
             </div>
             <div class="style-trailer__content">
-               <div class="trailer-video black"></div>
-               <p class="trailer__name">Трейлер (сезон 1)</p>
-               <p class="trailer__date">12 сентября 2023</p>
+               <div class="tabs">
+                  <div
+                     class="tab-panel"
+                     role="tabpanel"
+                     id="panel-1"
+                     aria-labelledby="tab-1"
+                     aria-hidden="false"
+                  >
+                     <div class="trailer-video black">
+                        <iframe
+                           width="100%"
+                           height="100%"
+                           src="https://www.youtube.com/embed/DEj8pub121Q?si=6b4-gf91UW90TGD_"
+                           title="YouTube video player"
+                           frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin"
+                           allowfullscreen
+                        ></iframe>
+                     </div>
+                     <p class="trailer__name">Трейлер (сезон 1) [YouTube]</p>
+                     <p class="trailer__date">12 сентября 2023</p>
+                  </div>
+
+                  <div
+                     class="tab-panel"
+                     role="tabpanel"
+                     id="panel-2"
+                     aria-labelledby="tab-2"
+                     aria-hidden="true"
+                  >
+                     <div class="trailer-video black">
+                        <iframe
+                           src="https://vkvideo.ru/video_ext.php?oid=-108468&id=456251197&hd=2"
+                           width="100%"
+                           height="100%"
+                           allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                           frameborder="0"
+                           allowfullscreen
+                           class="orange"
+                        ></iframe>
+                     </div>
+                     <p class="trailer__name">Трейлер (сезон 1) [VK]</p>
+                     <p class="trailer__date">12 сентября 2023</p>
+                  </div>
+
+                  <div
+                     class="tab-panel"
+                     role="tabpanel"
+                     id="panel-3"
+                     aria-labelledby="tab-3"
+                     aria-hidden="true"
+                  >
+                     <div class="trailer-video black">
+                        <iframe width="100%" height="100%" src="https://rutube.ru/play/embed/a71fdfe0dfa6411ad6fffc238dcd9c18/?skinColor=000000" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                     </div>
+                     <p class="trailer__name">Трейлер (сезон 1) [Rutube]</p>
+                     <p class="trailer__date">7 октября 2023</p>
+                  </div>
+
+                  <div
+                     class="tabs-nav"
+                     role="tablist"
+                     aria-label="Content sections"
+                  >
+                     <div class="tabs-indicator"></div>
+                     <button
+                        class="tab-button"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="panel-1"
+                        id="tab-1"
+                     >
+                        YouTube
+                     </button>
+                     <button
+                        class="tab-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-2"
+                        id="tab-2"
+                     >
+                        VK
+                     </button>
+                     <button
+                        class="tab-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-3"
+                        id="tab-3"
+                     >
+                        Rutube
+                     </button>
+                  </div>
+               </div>
             </div>
          </div>
 
          <div class="style-actors">
             <div class="style-title">
                <h3>Актёры</h3>
-               <a
-                  href="#"
-                  id="download-button"
-                  class="btn"
-                  >Все</a
-               >
+               <a href="#" id="download-button" class="btn">Все</a>
             </div>
             <div class="style-actors__content">
                <div class="actors__list">
@@ -256,10 +348,7 @@
                   <div class="raiting-block__votes">
                      <span>603 253</span> оценки
                   </div>
-                  <a
-                     href="#"
-                     id="download-button"
-                     class="btn-large orange"
+                  <a href="#" id="download-button" class="btn-large orange"
                      >Оценить</a
                   >
                </div>
@@ -300,16 +389,11 @@
          <div class="style-cadrs">
             <div class="style-title">
                <h3>Изображения</h3>
-               <a
-                  href="#"
-                  id="download-button"
-                  class="btn"
-                  >Все</a
-               >
+               <a href="#" id="download-button" class="btn">Все</a>
             </div>
             <div class="style-cadrs__content">
                <div class="cadrs-list">
-                   <!-- cadrs  -->
+                  <!-- cadrs  -->
                </div>
             </div>
          </div>
@@ -317,12 +401,7 @@
          <div class="style-reviews">
             <div class="style-title">
                <h3>Рецензии</h3>
-               <a
-                  href="#"
-                  id="download-button"
-                  class="btn"
-                  >Все</a
-               >
+               <a href="#" id="download-button" class="btn">Все</a>
             </div>
             <div class="style-reviews__content">
                <div class="reviews-list">
